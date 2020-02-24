@@ -21,7 +21,7 @@
         "typeScript support"
     ],
     "scripts": {
-        "build": "npm run build:clean && npm run build:lib",
+        "build": "npm run build:clean && npm run build:lib && cp -a src/typings/. lib",
         "build:clean": "rimraf lib/",
         "build:lib": "tsc",
         "build:check": "tsc --noEmit"
@@ -37,11 +37,12 @@
     },
     "devDependencies": {
         "@types/react": "^16.9.22",
+        "@types/react-dom": "^16.9.5",
+        "copyfiles": "^2.2.0",
         "eslint": "^6.8.0",
         "eslint-config-oberon": "^2.0.0",
         "oberon-prettier-config": "^1.0.0",
         "prettier": "^1.19.1",
-        "typescript": "^3.8.2",
-        "@types/react-dom": "^16.9.5"
+        "typescript": "^3.8.2"
     }
 }
