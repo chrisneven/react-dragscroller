@@ -1,0 +1,37 @@
+{
+    "name": "react-scrollbooster",
+    "version": "0.0.2",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "A react library that utilizes ScrollBooster in order to create drag-to-scroll components",
+    "files": [
+        "lib"
+    ],
+    "author": "Chris Neven",
+    "license": "MIT",
+    "scripts": {
+        "build": "npm run build:clean && npm run build:lib",
+        "build:clean": "rimraf lib/",
+        "build:lib": "tsc",
+        "build:check": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@types/react-dom": "^16.9.5",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "scrollbooster": "^2.2.2"
+    },
+    "PeerDependencies": {
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0"
+    },
+    "devDependencies": {
+        "@types/react": "^16.9.22",
+        "eslint": "^6.8.0",
+        "eslint-config-oberon": "^2.0.0",
+        "oberon-prettier-config": "^1.0.0",
+        "prettier": "^1.19.1",
+        "typescript": "^3.8.2"
+    }
+}
